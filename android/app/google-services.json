@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "106709735787",
+    "project_id": "email-auth-5c233",
+    "storage_bucket": "email-auth-5c233.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106709735787:android:fd790259bc1b02141c942e",
+        "android_client_info": {
+          "package_name": "com.example.email_auth_firebase_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLiGuv-zBrI4yc7ybPySdVycSRKXqo5Hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,12 +11,16 @@ class SignUpProvider extends ChangeNotifier {
   final formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordConfirmController =
+      TextEditingController();
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<bool> signUp() async {
     bool success = false;
-    if (formKey.currentState!.validate()) {
+
+    if (formKey.currentState!.validate() &&
+        passwordController.text == passwordConfirmController.text) {
       setAppLoading();
       try {
         await _auth

@@ -13,9 +13,11 @@ class AppValidator {
     return null;
   }
 
-  static String? passwordValidate(String? value) {
+  static String? passwordValidate(String? value, {String? password}) {
     if (value == null || value.length < 6) {
       return 'Please enter correct password';
+    } else if (password != null && value != password) {
+      return 'Passwords do not match';
     }
     return null;
   }

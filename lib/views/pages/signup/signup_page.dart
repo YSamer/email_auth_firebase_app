@@ -48,6 +48,16 @@ class SignUpPage extends StatelessWidget {
                       validator: AppValidator.passwordValidate,
                       unfocusWhenTapOutside: true,
                     ),
+                    16.hSize,
+                    MainTextField(
+                      title: 'Password Confirmation',
+                      hint: 'Password Confirmation',
+                      controller: provider.passwordConfirmController,
+                      obscureText: true,
+                      validator: (value) => AppValidator.passwordValidate(value,
+                          password: provider.passwordController.text),
+                      unfocusWhenTapOutside: true,
+                    ),
                     32.hSize,
                     MainButton(
                       onPressed: () async {

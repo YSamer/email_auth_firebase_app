@@ -1,6 +1,7 @@
 import 'package:email_auth_firebase_app/core/utilities/app_routes.dart';
 import 'package:email_auth_firebase_app/providers/auth/logout_provider.dart';
 import 'package:email_auth_firebase_app/views/pages/login/login_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -34,15 +35,18 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Welcome to Home Page',
               style: TextStyle(fontSize: 24),
             ),
-            // Add more widgets as needed
+            Text(
+              'Your Email is: ${FirebaseAuth.instance.currentUser?.email}',
+              style: const TextStyle(fontSize: 12),
+            ),
           ],
         ),
       ),

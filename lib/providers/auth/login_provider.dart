@@ -28,7 +28,7 @@ class LoginProvider extends ChangeNotifier {
           log(user.toString());
           if (user.user?.uid != null) {
             success = true;
-            showSnackbar('You have successfully signed up');
+            showSnackbar('You have successfully logged in');
           }
         });
       } on FirebaseAuthException catch (e) {
